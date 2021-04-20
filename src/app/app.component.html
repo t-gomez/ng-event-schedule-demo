@@ -1,0 +1,14 @@
+<div class="p-20 bg-gradient-to-br from-green-400 via-pink-300 to-blue-500">
+  <div class="bg-white rounded-lg p-8">
+    <ng-event-schedule
+      [columns]="columns"
+      [startHour]="startHour"
+      [endHour]="endHour"
+      (selectItem)="onSelectItem($event)"
+      (selectCell)="onSelectCell($event)">
+    </ng-event-schedule>
+  </div>
+</div>
+<div class="fixed bottom-0 right-0 m-8 flex flex-col items-end gap-2 z-20">
+  <div *ngFor="let notification of notifications" class="cursor-pointer select-none p-2 bg-gray-800 rounded-lg shadow-lg text-white">{{ notification.title }}</div>
+</div>
